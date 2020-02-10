@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @api_answer["found"] === false %>
+  <p>Sorry, but <strong><%= @answer %></strong> is not a valid English word </p>
+  <% elsif @test_inclusion === false %>
+    <p>Sorry, but <strong><%= @answer %></strong> is not part of the grid</p>
+  <% else %>
+    <p>Good, <strong><%= @answer %></strong> is part of the grid!</p>
+<% end %>
+
+<%= link_to "Try again", new_path %>
